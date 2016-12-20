@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
-
 gem 'rails', ' ~> 4.2.1'
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 3.0.4'
@@ -11,7 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.5.3'
 gem 'font-awesome-sass'
 gem "font-awesome-rails"
-gem 'bootstrap-sass', '~> 3.2'
+gem 'bootstrap-sass', '~> 3.3'
 gem 'bootswatch-rails'
 gem 'gravatar-ultimate', '~> 2.0.0'
 gem 'humanizer', '~> 2.6.0'
@@ -22,6 +20,8 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'sprockets-rails', '~> 3.2'
+gem 'sprockets', '~> 3.7', '>= 3.7.1'
 
 group :production do
   gem 'pg', '~> 0.17.1'
@@ -30,7 +30,11 @@ end
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.8'
-  gem 'rspec-rails', '~> 2.99.0'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'rspec-core', '~> 3.5', '>= 3.5.4'
+  gem 'rspec-expectations', '~> 3.5'
+  gem 'rspec-mocks', '~> 3.5'
+  gem 'rspec-support', '~> 3.5'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'shoulda'
@@ -47,3 +51,5 @@ group :development do
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'meta_request', '~> 0.2.8'
 end
+
+ruby '2.3.3'
